@@ -108,6 +108,12 @@ export const containerGenerator: PlopGenerator = {
       });
       actions.push({
         type: "add",
+        path: `${containerPath}/styles.ts`,
+        templateFile: "./container/styles.ts.hbs",
+        abortOnFail: true,
+      });
+      actions.push({
+        type: "add",
         path: `${containerPath}/types.ts`,
         templateFile: "./container/types.ts.hbs",
         abortOnFail: true,
