@@ -1,7 +1,10 @@
 import { History } from "history";
 import { FC, ReactElement, useLayoutEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Route, Router, Routes } from "react-router-dom";
+import { globalActions, useglobalSlice } from "store/slice";
 import history from "../router/history";
+import { Header } from "./components/common/header";
 import { Home } from "./containers/Home";
 import { NotFoundPage } from "./containers/NotFound";
 import { AppPages } from "./types";
@@ -29,13 +32,21 @@ const CustomRouter: FC<CustomRouterProps> = ({ history, ...props }) => {
 };
 
 function App() {
+  useglobalSlice();
+  const dispatch = useDispatch();
+  useLayoutEffect(() => {
+    dispatch(globalActions.getAndSetTheme());
+  }, []);
   return (
-    <CustomRouter history={history}>
-      <Routes>
-        <Route path={AppPages.RootPage} element={<Home />} />
-        <Route path={AppPages.NotFoundPage} element={<NotFoundPage />} />
-      </Routes>
-    </CustomRouter>
+    <>
+      <Header></Header>
+      <CustomRouter history={history}>
+        <Routes>
+          <Route path={AppPages.RootPage} element={<Home />} />
+          <Route path={AppPages.NotFoundPage} element={<NotFoundPage />} />
+        </Routes>
+      </CustomRouter>
+    </>
   );
 }
 

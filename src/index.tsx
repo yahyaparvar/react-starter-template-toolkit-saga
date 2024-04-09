@@ -1,5 +1,4 @@
 import { FontLoadingPage } from "app/components/common/fontLoading";
-import ThemeToggler from "app/components/common/header/components/theme/themeToggler";
 import FontFaceObserver from "fontfaceobserver";
 import { useLayoutEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
@@ -30,7 +29,6 @@ const ConnectedApp = ({ Component }: Props) => {
   return (
     <ReduxProvider store={store}>
       <GlobalStyle />
-      <ThemeToggler />
       <HelmetProvider>
         {isFontLoaded ? <Component /> : <FontLoadingPage />}
       </HelmetProvider>

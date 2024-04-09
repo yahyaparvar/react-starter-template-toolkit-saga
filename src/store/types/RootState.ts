@@ -1,6 +1,7 @@
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 import { HomeState } from "app/containers/Home/types";
+import { GlobalState } from "store/slice";
 
 /* 
   Because the redux-injectors injects your reducers asynchronously somewhere in your code
@@ -9,7 +10,7 @@ import { HomeState } from "app/containers/Home/types";
   So, not available always
 */
 export interface RootState {
-  global?: any;
+  global?: GlobalState;
   home?: HomeState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }

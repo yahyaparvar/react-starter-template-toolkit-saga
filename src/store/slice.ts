@@ -1,27 +1,29 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { PayloadAction } from "@reduxjs/toolkit";
+import { Themes } from "app/types";
 import { createSlice } from "store/toolkit";
 import { useInjectReducer, useInjectSaga } from "./redux-injectors";
 import { globalSaga } from "./saga";
 
-interface ContainerState {
+export interface GlobalState {
   loggedIn: boolean;
+  theme: string;
 }
 // The initial state of the LoginPage container
-export const initialState: ContainerState = {
+export const initialState: GlobalState = {
   loggedIn: false,
+  theme: Themes.LIGHT,
 };
 
 const globalSlice = createSlice({
   name: "global",
   initialState,
   reducers: {
-    setIsLoggedIn(state, action: PayloadAction<boolean>) {
-      state.loggedIn = action.payload;
-      if (action.payload === false) {
-        localStorage.clear();
-      }
+    changeTheme(state, action: PayloadAction<string>) {},
+    setTheme(state, action: PayloadAction<string>) {
+      state.theme = action.payload;
     },
+    getAndSetTheme() {},
   },
 });
 

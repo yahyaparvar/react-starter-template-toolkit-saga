@@ -1,34 +1,16 @@
 import CustomSelect from "app/components/common/dropdown";
 import { Themes } from "app/types";
-import { memo, useLayoutEffect, useState } from "react";
-import { LocalStorageKeys, storage } from "store/storage";
+import { memo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { globalSelectors } from "store/selector";
+import { globalActions } from "store/slice";
 import styled from "styled-components";
 
 const ThemeToggler = () => {
-  const [theme, setTheme] = useState("");
-
-  useLayoutEffect(() => {
-    const savedTheme = storage.read(LocalStorageKeys.THEME);
-    const app = document.querySelector("body");
-    if (app) {
-      app.classList.add(savedTheme);
-    }
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      setTheme(Themes.LIGHT);
-      storage.write(LocalStorageKeys.THEME, Themes.LIGHT);
-    }
-  }, []);
-
+  const theme = useSelector(globalSelectors.theme);
+  const dispatch = useDispatch();
   const toggleTheme = (newTheme: string) => {
-    const app = document.querySelector("body");
-    if (app) {
-      app.classList.remove(theme);
-      app.classList.add(newTheme);
-    }
-    setTheme(newTheme);
-    storage.write(LocalStorageKeys.THEME, newTheme);
+    dispatch(globalActions.changeTheme(newTheme));
   };
   const availableThemes = Object.values(Themes).map((themeValue) => ({
     value: themeValue,
