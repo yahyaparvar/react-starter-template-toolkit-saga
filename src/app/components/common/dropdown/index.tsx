@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { UNSELECTABLE } from "styles/globalStyles";
+import { useOnClickOutside } from "usehooks-ts";
 
 interface Option {
   value: string;
@@ -21,15 +22,18 @@ const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedValue, setSelectedValue] = useState(value || "");
-
+  const containerRef = useRef(null);
   const handleItemClick = (item: string | number) => {
     setSelectedValue(item);
     onChange && onChange(item as any);
     setIsActive(false);
   };
+  useOnClickOutside(containerRef, () => {
+    setIsActive(false);
+  });
 
   return (
-    <DropdownContainer>
+    <DropdownContainer ref={containerRef}>
       <DropdownButton onClick={() => setIsActive(!isActive)}>
         {options.find((option) => option.value === selectedValue)?.label ||
           rest.defaultValue}
@@ -63,15 +67,14 @@ const DropdownContainer = styled.div`
 const DropdownButton = styled.div`
   ${UNSELECTABLE}
   cursor: pointer;
-  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background: white;
-  border: 1px solid #ddd;
+  background: var(--background-color);
+  border: 1px solid var(--text);
   border-radius: 5px;
-  color: #777;
+  color: var(--text);
   font-weight: 500;
 `;
 
@@ -84,10 +87,10 @@ const DropdownContent = styled.div`
 
 const DropdownItem = styled.div`
   padding: 10px;
+  background: var(--background-color);
   cursor: pointer;
-
   &:hover {
-    background: #fcfcfc;
+    filter: brightness(1.2);
   }
 `;
 

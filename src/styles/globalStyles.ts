@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   --button-secondary: #502274;
   --button-bright: #A42CD6;
   --button-bright-hover: #8d3ead;
-  --text: #000;
+  --text: #84868a;
   
   --disabled-text: #84868a;
   --input-token-bg: #422954;
@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   --background-color:#fff;
 }
 .DARK {
-  --text: #fff;
+  --text: #84868a;
   --background-color:#18181f;
 }
 

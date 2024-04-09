@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   background-color: var(--background-color);
 `;
 export const LoadingText = styled.div`
-  color: var(--title-text);
+  color: var(--text);
   font-size: 23px;
   font-weight: 800;
 `;

@@ -4,6 +4,7 @@ import { Themes } from "app/types";
 import { createSlice } from "store/toolkit";
 import { useInjectReducer, useInjectSaga } from "./redux-injectors";
 import { globalSaga } from "./saga";
+import { LocalStorageKeys, storage } from "./storage";
 
 export interface GlobalState {
   loggedIn: boolean;
@@ -12,7 +13,7 @@ export interface GlobalState {
 // The initial state of the LoginPage container
 export const initialState: GlobalState = {
   loggedIn: false,
-  theme: Themes.LIGHT,
+  theme: storage.read(LocalStorageKeys.THEME) || Themes.LIGHT,
 };
 
 const globalSlice = createSlice({
