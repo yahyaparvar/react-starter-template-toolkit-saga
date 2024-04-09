@@ -16,7 +16,8 @@ const ThemeToggler = () => {
     if (savedTheme) {
       setTheme(savedTheme);
     } else {
-      setTheme(Themes.DARK);
+      setTheme(Themes.LIGHT);
+      storage.write(LocalStorageKeys.THEME, Themes.LIGHT);
     }
   }, []);
 

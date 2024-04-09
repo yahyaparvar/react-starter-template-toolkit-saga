@@ -1,5 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "store/toolkit";
+import { useInjectReducer, useInjectSaga } from "./redux-injectors";
+import { globalSaga } from "./saga";
 
 interface ContainerState {
   loggedIn: boolean;
@@ -27,3 +30,8 @@ export const {
   reducer: globalReducer,
   name: sliceKey,
 } = globalSlice;
+export const useglobalSlice = () => {
+  useInjectReducer({ key: sliceKey, reducer: globalReducer });
+  useInjectSaga({ key: sliceKey, saga: globalSaga });
+  return { globalActions };
+};
