@@ -1,11 +1,12 @@
-import React, { useLayoutEffect, useState } from "react";
-import ReactDOM from "react-dom/client";
-import App from "./app/App";
+import { FontLoadingPage } from "app/components/common/fontLoading";
 import FontFaceObserver from "fontfaceobserver";
-import { Provider as ReduxProvider } from "react-redux";
+import { useLayoutEffect, useState } from "react";
+import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
+import { Provider as ReduxProvider } from "react-redux";
 import { configureAppStore } from "store/configureStore";
 import GlobalStyle from "styles/globalStyles";
+import App from "./app/App";
 interface Props {
   Component: typeof App;
 }
@@ -29,20 +30,7 @@ const ConnectedApp = ({ Component }: Props) => {
     <ReduxProvider store={store}>
       <GlobalStyle />
       <HelmetProvider>
-        {isFontLoaded ? (
-          <Component />
-        ) : (
-          <div
-            style={{
-              backgroundColor: "#18181f",
-              width: " 100vw",
-              height: "100vh",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          ></div>
-        )}
+        {isFontLoaded ? <Component /> : <FontLoadingPage />}
       </HelmetProvider>
     </ReduxProvider>
   );

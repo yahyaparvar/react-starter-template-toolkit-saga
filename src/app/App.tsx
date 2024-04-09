@@ -30,14 +30,12 @@ const CustomRouter: FC<CustomRouterProps> = ({ history, ...props }) => {
 
 function App() {
   return (
-    <>
-      <CustomRouter history={history}>
-        <Routes>
-          <Route path={AppPages.RootPage} element={<Home />} />
-          <Route path={AppPages.NotFoundPage} element={<NotFoundPage />} />
-        </Routes>
-      </CustomRouter>
-    </>
+    <CustomRouter history={history}>
+      <Routes>
+        <Route path={AppPages.RootPage} element={<Home />} />
+        <Route path={AppPages.NotFoundPage} element={<NotFoundPage />} />
+      </Routes>
+    </CustomRouter>
   );
 }
 

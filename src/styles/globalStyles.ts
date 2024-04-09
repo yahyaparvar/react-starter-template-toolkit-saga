@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   --token-button-bg: #5a3e70;
   --error-red: #d32f2f;
   --search-input-border: #9F9A9D;
-
+  --background-color:#18181f;
 }
 .darkTheme {
 
@@ -29,13 +29,16 @@ body,
 html {
   margin: 0;
   width: 100vw;
+  background-color:var(--background-color) ;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
+*{
+ font-family :"Inter",sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' ;
+}
 `;
-
 //COLUMN
 
 export const ROW = css`

@@ -4,14 +4,14 @@
  *
  */
 
-import React from "react";
 import { Helmet } from "react-helmet-async";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useInjectReducer, useInjectSaga } from "store/redux-injectors";
-import { homeReducer, sliceKey } from "./slice";
-import { selectHome } from "./selectors";
 import { homeSaga } from "./saga";
+import { selectHome } from "./selectors";
+import { homeReducer, sliceKey } from "./slice";
+import { Wrapper } from "./styles";
 
 interface Props {}
 
@@ -25,12 +25,11 @@ export function Home(props: Props) {
   const dispatch = useDispatch();
 
   return (
-    <>
+    <Wrapper>
       <Helmet>
         <title>Home</title>
         <meta name="description" content="Description of Home" />
       </Helmet>
-      <div>Home</div>
-    </>
+    </Wrapper>
   );
 }
