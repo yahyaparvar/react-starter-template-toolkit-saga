@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   --search-input-border: #9F9A9D;
   --background-color:#fff;
 }
-.dark {
+.DARK {
   --text: #fff;
   --background-color:#18181f;
 }

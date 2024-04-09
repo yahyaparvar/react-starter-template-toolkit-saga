@@ -5,7 +5,6 @@ export enum AppPages {
   // [INSERT NEW PAGE PATH ABOVE] < Needed for generating containers seamlessly
 }
 export enum Themes {
-  DARK = "dark",
-  LIGHT = "light",
+  DARK = "DARK",
+  LIGHT = "LIGHT",
 }
-export const themeObjectArray = [];
