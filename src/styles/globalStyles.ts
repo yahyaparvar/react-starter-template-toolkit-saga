@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
   --button-secondary: #502274;
   --button-bright: #A42CD6;
   --button-bright-hover: #8d3ead;
-  --title-text: #fff;
+  --text: #000;
+  
   --disabled-text: #84868a;
   --input-token-bg: #422954;
   --input-token-border: #805f5e;
@@ -19,10 +20,11 @@ const GlobalStyle = createGlobalStyle`
   --token-button-bg: #5a3e70;
   --error-red: #d32f2f;
   --search-input-border: #9F9A9D;
-  --background-color:#18181f;
+  --background-color:#fff;
 }
-.darkTheme {
-
+.dark {
+  --text: #fff;
+  --background-color:#18181f;
 }
 
 body,

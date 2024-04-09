@@ -4,3 +4,8 @@ export enum AppPages {
   NotFoundPage = "*",
   // [INSERT NEW PAGE PATH ABOVE] < Needed for generating containers seamlessly
 }
+export enum Themes {
+  DARK = "dark",
+  LIGHT = "light",
+}
+export const themeObjectArray = [];
