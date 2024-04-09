@@ -11,4 +11,5 @@ import { HomeState } from "app/containers/Home/types";
 export interface RootState {
   global?: any;
   home?: HomeState;
+  // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }

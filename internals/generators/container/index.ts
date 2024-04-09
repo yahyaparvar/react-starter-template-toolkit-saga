@@ -22,7 +22,7 @@ const rootStatePath = path.join(
   __dirname,
   "../../../src/store/types/RootState.ts"
 );
-const constantsPath = path.join(__dirname, "../../../src/app/constants.ts");
+const constantsPath = path.join(__dirname, "../../../src/app/types.ts");
 
 export const containerGenerator: PlopGenerator = {
   description: "Add a container component",

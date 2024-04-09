@@ -2,9 +2,9 @@ import { History } from "history";
 import { FC, ReactElement, useLayoutEffect, useState } from "react";
 import { Route, Router, Routes } from "react-router-dom";
 import history from "../router/history";
-import { AppPages } from "./types";
-import { NotFoundPage } from "./containers/NotFound";
 import { Home } from "./containers/Home";
+import { NotFoundPage } from "./containers/NotFound";
+import { AppPages } from "./types";
 interface CustomRouterProps {
   history: History;
   children?: ReactElement;
