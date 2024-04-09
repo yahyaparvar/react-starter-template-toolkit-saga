@@ -3,9 +3,8 @@
  * Asynchronously loads the component for NotFound
  *
  */
-import React from "react";
-import { lazyLoad } from "common/loadable";
 import { PageLoading } from "app/components/common/pageLoading";
+import { lazyLoad } from "common/loadable";
 
 export const NotFound = lazyLoad(
   () => import("./index"),

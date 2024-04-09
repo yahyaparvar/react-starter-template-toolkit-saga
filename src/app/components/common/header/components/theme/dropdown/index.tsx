@@ -1,8 +1,9 @@
+import { LazyImage } from "app/components/common/image/styles";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { UNSELECTABLE } from "styles/globalStyles";
 import { useOnClickOutside } from "usehooks-ts";
-
+import ThemeIconImg from "./theme-icon.svg";
 interface Option {
   value: string;
   label: string;
@@ -37,6 +38,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       <DropdownButton onClick={() => setIsActive(!isActive)}>
         {options.find((option) => option.value === selectedValue)?.label ||
           rest.defaultValue}
+        <ThemeIcon src={ThemeIconImg} />
       </DropdownButton>
       <DropdownContent style={{ display: isActive ? "block" : "none" }}>
         {options.map((option) => (
@@ -54,14 +56,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 };
 
 const DropdownContainer = styled.div`
-  margin: 0 auto;
-  z-index: 10000;
-  width: 300px;
+  z-index: 1;
+  width: 130px;
   position: relative;
-
-  * {
-    z-index: 10;
-  }
 `;
 
 const DropdownButton = styled.div`
@@ -93,5 +90,5 @@ const DropdownItem = styled.div`
     filter: brightness(1.2);
   }
 `;
-
+const ThemeIcon = styled(LazyImage)``;
 export default Dropdown;

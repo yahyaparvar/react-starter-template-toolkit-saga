@@ -1,10 +1,10 @@
-import CustomSelect from "app/components/common/dropdown";
 import { Themes } from "app/types";
 import { memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { globalSelectors } from "store/selector";
 import { globalActions } from "store/slice";
 import styled from "styled-components";
+import Dropdown from "./dropdown";
 
 const ThemeToggler = () => {
   const theme = useSelector(globalSelectors.theme);
@@ -19,8 +19,7 @@ const ThemeToggler = () => {
 
   return (
     <Wrapper>
-      <ThemeText>{`${theme.toLocaleUpperCase()} Theme`}</ThemeText>
-      <CustomSelect
+      <Dropdown
         defaultValue={theme}
         options={availableThemes}
         onChange={(newTheme) => {
@@ -37,10 +36,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 12px 8px;
   color: var(--disabled-text);
-`;
-
-const ThemeText = styled.div`
-  margin-right: 10px;
 `;
 
 export default memo(ThemeToggler);
