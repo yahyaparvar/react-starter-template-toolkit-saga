@@ -1,4 +1,4 @@
-import { LazyImage } from "app/components/common/image/styles";
+import { LazyImage } from "app/components/image/styles";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { UNSELECTABLE } from "styles/globalStyles";

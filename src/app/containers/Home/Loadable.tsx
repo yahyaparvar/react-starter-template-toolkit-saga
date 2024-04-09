@@ -3,7 +3,7 @@
  * Asynchronously loads the component for Home
  *
  */
-import { PageLoading } from "app/components/common/pageLoading";
+import { PageLoading } from "app/components/pageLoading";
 import { lazyLoad } from "common/loadable";
 
 export const Home = lazyLoad(

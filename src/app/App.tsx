@@ -7,7 +7,7 @@ import { globalActions, useglobalSlice } from "store/slice";
 import styled from "styled-components";
 import { COLUMN_ALIGN_START__JUSTIFY_START } from "styles/globalStyles";
 import history from "../router/history";
-import { Header } from "./components/common/header";
+import { Header } from "./components/header";
 import { Home } from "./containers/Home";
 import { NotFoundPage } from "./containers/NotFound";
 import { AppPages } from "./types";

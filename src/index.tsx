@@ -1,4 +1,4 @@
-import { FontLoadingPage } from "app/components/common/fontLoading";
+import { FontLoadingPage } from "app/components/fontLoading";
 import { Themes } from "app/types";
 import FontFaceObserver from "fontfaceobserver";
 import { useLayoutEffect, useState } from "react";
