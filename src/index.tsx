@@ -1,9 +1,11 @@
 import { FontLoadingPage } from "app/components/fontLoading";
 import { Themes } from "app/types";
 import FontFaceObserver from "fontfaceobserver";
+import i18n from "locales/i18n";
 import { useLayoutEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
+import { I18nextProvider } from "react-i18next";
 import { Provider as ReduxProvider } from "react-redux";
 import { configureAppStore } from "store/configureStore";
 import { LocalStorageKeys, storage } from "store/storage";
@@ -43,10 +45,12 @@ const ConnectedApp = ({ Component }: Props) => {
   }, [isFontLoaded]);
   return (
     <ReduxProvider store={store}>
-      <GlobalStyle />
-      <HelmetProvider>
-        {isFontLoaded ? <Component /> : <FontLoadingPage />}
-      </HelmetProvider>
+      <I18nextProvider i18n={i18n}>
+        <GlobalStyle />
+        <HelmetProvider>
+          {isFontLoaded ? <Component /> : <FontLoadingPage />}
+        </HelmetProvider>
+      </I18nextProvider>
     </ReduxProvider>
   );
 };

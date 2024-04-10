@@ -38,6 +38,7 @@ html {
   overflow-x: hidden;
 }
 *{
+ color:var(--text);
  font-family :"Inter",sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' ;
 }
 `;

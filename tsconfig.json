@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "baseUrl": "./src"
   },
-  "include": ["src", "__tests__"]
+  "include": ["src", "__tests__", "types/i18n.d.ts"]
 }
