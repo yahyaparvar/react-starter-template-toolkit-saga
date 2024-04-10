@@ -10,9 +10,12 @@ export function* changeTheme(
   const newTheme = action.payload;
   const currentTheme: string = yield select(globalSelectors.theme);
   const app = document.querySelector("body");
-  if (app) {
+  const html = document.querySelector("html");
+  if (app && html) {
     app.classList.remove(currentTheme);
     app.classList.add(newTheme);
+    html.classList.remove(currentTheme);
+    html.classList.add(newTheme);
   }
   yield put(globalActions.setTheme(newTheme));
   storage.write(LocalStorageKeys.THEME, newTheme);
@@ -20,8 +23,10 @@ export function* changeTheme(
 export function* getAndSetTheme() {
   const savedTheme = storage.read(LocalStorageKeys.THEME);
   const app = document.querySelector("body");
-  if (app) {
+  const html = document.querySelector("html");
+  if (app && html) {
     app.classList.add(savedTheme);
+    html.classList.add(savedTheme);
   }
   if (savedTheme) {
     yield put(globalActions.setTheme(savedTheme));

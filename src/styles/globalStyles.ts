@@ -3,45 +3,95 @@ import { createGlobalStyle, css } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 
 :root {
-  --button-regular: #2f242c;
-  --button-regular-hover: #523d4c;
-  --button-primary: #A42CD6;
-  --button-secondary: #502274;
-  --button-bright: #A42CD6;
-  --button-bright-hover: #8d3ead;
   --text: #84868a;
   --font:"Inter";
+  --border:#E2E8F0;
   --title:#0E172A;
+  --background-secondary:rgb(248 250 252/1);
   --button:#007ACC;
   --button-text:#fff;
-  --disabled-text: #84868a;
-  --input-token-bg: #422954;
-  --input-token-border: #805f5e;
-  --input-token-border-hover: #d1a9a7;
-  --button-text-unhover:#d1bfbe;
-  --token-button-bg-hover: #694882;
-  --token-button-bg: #5a3e70;
-  --error-red: #d32f2f;
-  --search-input-border: #9F9A9D;
   --background-color:#fff;
 }
 .DARK {
-  --text: #84868a;
-  --background-color:#18181f;
+    --text: #e5e7eb;
+    --border: #374151;
+    --title: #ffffff;
+    --background-secondary: #1f2937;
+    --background-color: #111827;
 }
-
+.DRACULA{
+  --text: #f8f8f2;
+  --font: "Inter";
+  --border: #44475a;
+  --title: #50fa7b;
+  --background-secondary: #282a36;
+  --button: #bd93f9;
+  --button-text: #f8f8f2;
+  --background-color: #282a36;
+}
+.SOLAR{
+  --text: #657b83;
+  --font: "Inter";
+  --border: #93a1a1;
+  --title: #268bd2;
+  --background-secondary: #fdf6e3;
+  --button: #cb4b16;
+  --button-text: #fdf6e3;
+  --background-color: #002b36;
+}
+.NORD{
+  --text: #d8dee9;
+  --font: "Inter";
+  --border: #4c566a;
+  --title: #81a1c1;
+  --background-secondary: #2e3440;
+  --button: #88c0d0;
+  --button-text: #2e3440;
+  --background-color: #3b4252;
+}
+.DISCORD{
+  --text: #b9bbbe;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --border: #4f545c;
+  --title: #7289da;
+  --background-secondary: #36393f;
+  --button: #7289da;
+  --button-text: #ffffff;
+  --background-color: #2f3136;
+}
+.MIDNIGHT{
+  --text: #c3c3c3;
+  --font: "Roboto", Arial, sans-serif;
+  --border: #586069;
+  --title: #99aab5;
+  --background-secondary: #292b2f;
+  --button: #00bcd4; /* Cyan accent color */
+  --button-text: #ffffff;
+  --background-color: #1e1e1e;
+}
+.LOCA{
+  --text: #d8dee9;
+  --font: "Roboto", Arial, sans-serif;
+  --border: #a4acc4;
+  --title: #ffcc00;
+  --background-secondary: #3d4754;
+  --button: #4caf50;
+  --button-text: #ffffff;
+  --background-color: #282c34;
+}
 body,
 html {
   margin: 0;
   width: 100vw;
-  background-color:var(--background-color) ;
   min-height: 100vh;
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 *{
- color: var(--text);
+  color: var(--text);
+ box-sizing:border-box ;
  font-family : var(--font),sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' ;
 }
 `;

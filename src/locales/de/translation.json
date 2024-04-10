@@ -1,3 +1,5 @@
 {
-  "greeting":"Hallo Wierld!"
+  "greeting": "Hallo Welt!",
+  "A_create_react_app_template_using_redux_saga_toolkit": "Ein create-react-app-Template, das redux saga & toolkit verwendet.",
+  "Features": "Funktionen"
 }

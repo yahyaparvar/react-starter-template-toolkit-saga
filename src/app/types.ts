@@ -7,4 +7,10 @@ export enum AppPages {
 export enum Themes {
   DARK = "DARK",
   LIGHT = "LIGHT",
+  DRACULA = "DRACULA",
+  SOLAR = "SOLAR",
+  NORD = "NORD",
+  DISCORD = "DISCORD",
+  MIDNIGHT = "MIDNIGHT",
+  LOCA = "LOCA",
 }

@@ -61,6 +61,6 @@ const LanguageOption = styled.button`
   padding: 8px 16px;
   font-size: 16px;
   &:hover {
-    background-color: #f1f1f1;
+    filter: brightness(1.3);
   }
 `;

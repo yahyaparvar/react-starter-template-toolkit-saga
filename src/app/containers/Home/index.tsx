@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useTranslation } from "react-i18next";
 import { useInjectReducer, useInjectSaga } from "store/redux-injectors";
+import { Features } from "./features";
 import { HeroComponent } from "./hero";
 import { homeSaga } from "./saga";
 import { selectHome } from "./selectors";
@@ -33,6 +34,7 @@ export function Home(props: Props) {
         <meta name="description" content="Description of Home" />
       </Helmet>
       <HeroComponent />
+      <Features />
     </Wrapper>
   );
 }
