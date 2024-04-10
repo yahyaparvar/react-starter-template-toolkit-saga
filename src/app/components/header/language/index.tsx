@@ -1,7 +1,9 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import { ROW_ALIGN_CENTER__SPACE_B } from "styles/globalStyles";
 import { useOnClickOutside } from "usehooks-ts";
+import GlobeIcon from "./globeIcon";
 
 export const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
@@ -30,6 +32,7 @@ export const LanguageSwitcher: React.FC = () => {
     <LanguageSwitcherContainer ref={containerRef}>
       <DropdownButton onClick={() => setDropdownOpen(!dropdownOpen)}>
         {i18n.language}
+        <GlobeIcon />
       </DropdownButton>
       <DropdownContent open={dropdownOpen}>
         <LanguageOption onClick={() => changeLanguage("en")}>
@@ -50,7 +53,7 @@ const LanguageSwitcherContainer = styled.div`
 `;
 
 const DropdownButton = styled.button`
-  background-color: transparent;
+  background-color: var(--background-secondary);
   height: 100%;
   border-radius: 8px;
   border: 1px solid var(--text);
@@ -58,13 +61,19 @@ const DropdownButton = styled.button`
   font-size: 16px;
   width: 100px;
   padding: 10px;
+  ${ROW_ALIGN_CENTER__SPACE_B}
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 `;
 
 const DropdownContent = styled.div`
   display: ${(props: { open: boolean }) => (props.open ? "block" : "none")};
   position: absolute;
-  top: 56px;
-  background-color: var(--background);
+  top: 46px;
+  border-radius: 6px;
+  background-color: var(--background-secondary);
   min-width: 100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;

@@ -69,7 +69,7 @@ const DropdownButton = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background: var(--background-color);
+  background: var(--background-secondary);
   border: 1px solid var(--text);
   border-radius: 5px;
   color: var(--text);
@@ -85,7 +85,7 @@ const DropdownContent = styled.div`
 
 const DropdownItem = styled.div`
   padding: 10px;
-  background: var(--background-color);
+  background-color: var(--background-secondary);
   cursor: pointer;
   &:hover {
     filter: brightness(1.2);
