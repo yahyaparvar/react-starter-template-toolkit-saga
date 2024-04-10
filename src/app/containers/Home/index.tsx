@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useTranslation } from "react-i18next";
 import { useInjectReducer, useInjectSaga } from "store/redux-injectors";
+import { HeroComponent } from "./hero";
 import { homeSaga } from "./saga";
 import { selectHome } from "./selectors";
 import { homeReducer, sliceKey } from "./slice";
@@ -31,7 +32,7 @@ export function Home(props: Props) {
         <title>Home</title>
         <meta name="description" content="Description of Home" />
       </Helmet>
-      <div>{t("greeting")}</div>
+      <HeroComponent />
     </Wrapper>
   );
 }

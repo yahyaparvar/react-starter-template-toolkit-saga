@@ -10,7 +10,10 @@ const GlobalStyle = createGlobalStyle`
   --button-bright: #A42CD6;
   --button-bright-hover: #8d3ead;
   --text: #84868a;
-  
+  --font:"Inter";
+  --title:#0E172A;
+  --button:#007ACC;
+  --button-text:#fff;
   --disabled-text: #84868a;
   --input-token-bg: #422954;
   --input-token-border: #805f5e;
@@ -38,8 +41,8 @@ html {
   overflow-x: hidden;
 }
 *{
- color:var(--text);
- font-family :"Inter",sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' ;
+ color: var(--text);
+ font-family : var(--font),sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' ;
 }
 `;
 //COLUMN
@@ -192,12 +195,8 @@ export const UNSELECTABLE = css`
 export const BUTTON = css`
   ${UNSELECTABLE}
   border: none;
-  padding: 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  border-radius: 14px;
-  margin: 4px 2px;
   cursor: pointer;
 `;
 
