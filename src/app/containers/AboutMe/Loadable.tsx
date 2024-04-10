@@ -5,6 +5,6 @@
 */
 import React from 'react';
 import { lazyLoad } from 'common/loadable';
-import { PageLoading } from 'app/components/common/pageLoading';
+import { PageLoading } from 'app/components/pageLoading';
 
 export const AboutMe = lazyLoad(() => import('./index'), module => module.AboutMe, {fallback: <PageLoading />,},);

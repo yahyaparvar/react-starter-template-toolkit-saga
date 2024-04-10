@@ -36,7 +36,7 @@ import { useInjectSaga } from 'utils/redux-injectors';
 {{/if}}
 {{#if wantSlice}}
 import { {{ComponentName}}Reducer, sliceKey } from './slice';
-import { select{{ properCase ComponentName }} } from './selectors';
+import { {{ properCase ComponentName }}selectors } from './selectors';
 {{/if}}
 {{#if wantSaga}}
 import { {{ camelCase ComponentName }}Saga } from './saga';
@@ -63,7 +63,7 @@ useInjectReducer({ key: sliceKey, reducer: {{ComponentName}}Reducer });
 
 {{#if wantSlice}}
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const {{ camelCase ComponentName }} = useSelector(select{{ properCase ComponentName }});
+const {{ camelCase ComponentName }} = useSelector({{ properCase ComponentName }}selectors.root);
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const dispatch = useDispatch();
 {{/if}}

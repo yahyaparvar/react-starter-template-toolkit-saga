@@ -1,3 +1,5 @@
+import history from "app/router/history";
+import { AppPages } from "app/types";
 import styled from "styled-components";
 import {
   ROW_ALIGN_CENTER__SPACE_B,
@@ -14,7 +16,13 @@ export const Header = () => {
     <Wrapper>
       <LinkAndLogo>
         <Logo />
-        <NavLink>About me</NavLink>
+        <NavLink
+          onClick={() => {
+            history.push(AppPages.AboutMe);
+          }}
+        >
+          About me
+        </NavLink>
       </LinkAndLogo>
       <LanguageAndTheme>
         <ThemeToggler />
@@ -50,5 +58,5 @@ const NavLink = styled.div`
   color: var(text);
 `;
 const GithubLink = styled.a`
-  margin-left: 8px;
+  margin: 0 8px;
 `;

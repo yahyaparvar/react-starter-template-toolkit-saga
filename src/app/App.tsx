@@ -7,6 +7,7 @@ import { globalActions, useglobalSlice } from "store/slice";
 import styled from "styled-components";
 import { COLUMN_ALIGN_START__JUSTIFY_START } from "styles/globalStyles";
 import { Header } from "./components/header";
+import { AboutMe } from "./containers/AboutMe/Loadable";
 import { Home } from "./containers/Home";
 import { NotFoundPage } from "./containers/NotFound";
 import history from "./router/history";
@@ -46,6 +47,7 @@ function App() {
       <CustomRouter history={history}>
         <Routes>
           <Route path={AppPages.RootPage} element={<Home />} />
+          <Route path={AppPages.AboutMe} element={<AboutMe />} />
           <Route path={AppPages.NotFoundPage} element={<NotFoundPage />} />
         </Routes>
       </CustomRouter>
