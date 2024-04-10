@@ -12,7 +12,7 @@ export const HeroComponent = () => {
         {t("A_create_react_app_template_using_redux_saga_toolkit")}
       </Description>
       <Button size="large" icon={<ChevronRightIcon />} iconPosition="right">
-        Use Template!
+        {t("Use_Template")}
       </Button>
     </Wrapper>
   );

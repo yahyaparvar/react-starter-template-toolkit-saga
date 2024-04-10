@@ -24,7 +24,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const StyledButton = styled.button<ButtonProps>`
   ${BUTTON}
   ${ROW_CENTER}
-  font-size:16px;
+  direction: ltr !important;
+  font-size: 16px;
   background-color: var(--button);
   color: var(--button-text);
   border-radius: 8px;

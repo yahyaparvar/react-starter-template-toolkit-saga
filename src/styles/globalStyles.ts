@@ -4,8 +4,8 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
   --text: #84868a;
-  --font:"Inter", "Noto Sans Arabic";
-  --persian-font:"Noto Sans Arabic";
+  --font:"Inter", "Rubik";
+  --persian-font:"Rubik";
   --border:#E2E8F0;
   --title:#0E172A;
   --background-secondary:rgb(248 250 252/1);
@@ -49,7 +49,6 @@ const GlobalStyle = createGlobalStyle`
 }
 .DISCORD{
   --text: #b9bbbe;
-  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --border: #4f545c;
   --title: #7289da;
   --background-secondary: #36393f;
@@ -59,7 +58,6 @@ const GlobalStyle = createGlobalStyle`
 }
 .MIDNIGHT{
   --text: #c3c3c3;
-  --font: "Roboto", Arial, sans-serif;
   --border: #586069;
   --title: #99aab5;
   --background-secondary: #292b2f;
@@ -69,7 +67,6 @@ const GlobalStyle = createGlobalStyle`
 }
 .LOCA{
   --text: #d8dee9;
-  --font: "Roboto", Arial, sans-serif;
   --border: #a4acc4;
   --title: #ffcc00;
   --background-secondary: #3d4754;
@@ -78,7 +75,11 @@ const GlobalStyle = createGlobalStyle`
   --background-color: #282c34;
 }
 .fa{
-  --font:"Noto Sans Arabic" !important;
+  --font:"Rubik" !important;
+  direction:rtl ;
+}
+.ar{
+  --font:"Rubik" !important;
   direction:rtl ;
 }
 body,
@@ -94,7 +95,7 @@ html {
 *{
   color: var(--text);
  box-sizing:border-box ;
- font-family : var(--font),sans-serif,system-ui, -apple-system,'Helvetica Neue';
+ font-family : var(--font),sans-serif,system-ui, -apple-system,'Helvetica Neue',"Rubik";
 }
 `;
 //COLUMN
