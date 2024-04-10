@@ -4,6 +4,7 @@ import {
   ROW_CENTER,
   UNSELECTABLE,
 } from "styles/globalStyles";
+import GitHubIcon from "./github";
 import { LanguageSwitcher } from "./language";
 import { Logo } from "./logo";
 import ThemeToggler from "./theme/themeToggler";
@@ -18,6 +19,12 @@ export const Header = () => {
       <LanguageAndTheme>
         <ThemeToggler />
         <LanguageSwitcher />
+        <GithubLink
+          target="_blank"
+          href="https://github.com/yahyaparvar/template-toolkit-saga"
+        >
+          <GitHubIcon />
+        </GithubLink>
       </LanguageAndTheme>
     </Wrapper>
   );
@@ -41,4 +48,7 @@ const NavLink = styled.div`
   text-decoration: underline;
   cursor: pointer;
   color: var(text);
+`;
+const GithubLink = styled.a`
+  margin-left: 8px;
 `;
