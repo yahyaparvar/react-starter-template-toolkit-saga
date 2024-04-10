@@ -1,9 +1,10 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+import { LocalStorageKeys, storage } from "store/storage";
 import deTranslation from "./de/translation.json";
 import enTranslation from "./en/translation.json";
-import { LocalStorageKeys, storage } from "store/storage";
+import faTranslation from "./fa/translation.json";
 
 const getLanguageFromLocalStorage = () => {
   return storage.read(LocalStorageKeys.LANG) || "en";
@@ -15,6 +16,9 @@ const resources = {
   },
   de: {
     translation: deTranslation,
+  },
+  fa: {
+    translation: faTranslation,
   },
 };
 

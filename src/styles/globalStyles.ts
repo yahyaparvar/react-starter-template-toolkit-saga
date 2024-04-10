@@ -4,7 +4,8 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
   --text: #84868a;
-  --font:"Inter";
+  --font:"Inter", "Noto Sans Arabic";
+  --persian-font:"Noto Sans Arabic";
   --border:#E2E8F0;
   --title:#0E172A;
   --background-secondary:rgb(248 250 252/1);
@@ -21,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
 }
 .DRACULA{
   --text: #f8f8f2;
-  --font: "Inter";
   --border: #44475a;
   --title: #50fa7b;
   --background-secondary: #282a36;
@@ -31,7 +31,6 @@ const GlobalStyle = createGlobalStyle`
 }
 .SOLAR{
   --text: #657b83;
-  --font: "Inter";
   --border: #93a1a1;
   --title: #268bd2;
   --background-secondary: #fdf6e3;
@@ -41,7 +40,6 @@ const GlobalStyle = createGlobalStyle`
 }
 .NORD{
   --text: #d8dee9;
-  --font: "Inter";
   --border: #4c566a;
   --title: #81a1c1;
   --background-secondary: #2e3440;
@@ -79,6 +77,10 @@ const GlobalStyle = createGlobalStyle`
   --button-text: #ffffff;
   --background-color: #282c34;
 }
+.fa{
+  --font:"Noto Sans Arabic" !important;
+  direction:rtl ;
+}
 body,
 html {
   margin: 0;
@@ -92,7 +94,7 @@ html {
 *{
   color: var(--text);
  box-sizing:border-box ;
- font-family : var(--font),sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' ;
+ font-family : var(--font),sans-serif,system-ui, -apple-system,'Helvetica Neue';
 }
 `;
 //COLUMN

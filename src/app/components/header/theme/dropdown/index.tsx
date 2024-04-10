@@ -58,6 +58,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 const DropdownContainer = styled.div`
   z-index: 1;
   width: 130px;
+  height: 100%;
   position: relative;
 `;
 

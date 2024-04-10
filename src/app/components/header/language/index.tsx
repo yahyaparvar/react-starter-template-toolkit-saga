@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { useOnClickOutside } from "usehooks-ts";
@@ -7,7 +7,18 @@ export const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const containerRef = useRef(null);
+  useLayoutEffect(() => {
+    const app = document.querySelector("body");
+    if (app) {
+      app.classList.add(i18n.language);
+    }
+  }, []);
   const changeLanguage = (lng: string) => {
+    const app = document.querySelector("body");
+    if (app) {
+      app.classList.remove(i18n.language);
+      app.classList.add(lng);
+    }
     i18n.changeLanguage(lng);
     setDropdownOpen(false);
   };
@@ -18,7 +29,7 @@ export const LanguageSwitcher: React.FC = () => {
   return (
     <LanguageSwitcherContainer ref={containerRef}>
       <DropdownButton onClick={() => setDropdownOpen(!dropdownOpen)}>
-        {i18n.language === "en" ? "English" : "German"}
+        {i18n.language}
       </DropdownButton>
       <DropdownContent open={dropdownOpen}>
         <LanguageOption onClick={() => changeLanguage("en")}>
@@ -26,6 +37,9 @@ export const LanguageSwitcher: React.FC = () => {
         </LanguageOption>
         <LanguageOption onClick={() => changeLanguage("de")}>
           German
+        </LanguageOption>
+        <LanguageOption onClick={() => changeLanguage("fa")}>
+          فارسی
         </LanguageOption>
       </DropdownContent>
     </LanguageSwitcherContainer>
@@ -37,16 +51,19 @@ const LanguageSwitcherContainer = styled.div`
 
 const DropdownButton = styled.button`
   background-color: transparent;
-  border: none;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--text);
   cursor: pointer;
   font-size: 16px;
   width: 100px;
+  padding: 10px;
 `;
 
 const DropdownContent = styled.div`
   display: ${(props: { open: boolean }) => (props.open ? "block" : "none")};
   position: absolute;
-  top: 30px;
+  top: 56px;
   background-color: var(--background);
   min-width: 100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

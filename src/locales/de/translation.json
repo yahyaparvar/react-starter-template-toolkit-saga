@@ -1,5 +1,17 @@
 {
   "greeting": "Hallo Welt!",
-  "A_create_react_app_template_using_redux_saga_toolkit": "Ein create-react-app-Template, das redux saga & toolkit verwendet.",
-  "Features": "Funktionen"
+  "A_create_react_app_template_using_redux_saga_toolkit": "Ein Create-React-App-Template, das Redux Saga & Toolkit verwendet.",
+  "Features": "Eigenschaften",
+  "Lightweight": "Leichtgewichtig",
+  "CRA_Template_is_a_boilerplate_with_all_you_need_in_a_project_ensuring_a_lean_and_efficient_solution": "CRA-Template ist ein Grundgerüst mit allem, was Sie in einem Projekt benötigen, und gewährleistet eine schlanke und effiziente Lösung.",
+  "Type_Safe": "Typsicher",
+  "Catch_compile_time_errors_with_ease_and_unlock_strong_typing_benefits": "Fangen Sie Kompilierungsfehler leicht ein und nutzen Sie die Vorteile der starken Typisierung.",
+  "Tree_Shakable": "Tree-Shakable",
+  "Eliminating_unused_code_and_delivering_leaner_bundles_for_lightning_fast_load_times": "Eliminieren Sie ungenutzten Code und liefern Sie schlankere Pakete für blitzschnelle Ladezeiten.",
+  "Easy_to_Use": "Einfach zu bedienen",
+  "Get_started_in_no_time_Explore_comprehensive_documentation_and_rich_examples": "Legen Sie sofort los! Entdecken Sie umfassende Dokumentation und reichhaltige Beispiele.",
+  "Developer_Friendly": "Entwicklerfreundlich",
+  "Simplify_development_with_an_intuitive_and_powerful_file_generation_using_plop_Don_t_repeat_yourself": "Vereinfachen Sie die Entwicklung mit einer intuitiven und leistungsstarken Dateigenerierung mit Plop. Wiederholen Sie sich nicht.",
+  "Open_Source": "Open-Source",
+  "Join_the_vibrant_community_Collaborate_contribute_and_unlock_endless_possibilities_together.": "Treten Sie der lebendigen Community bei! Arbeiten Sie zusammen, tragen Sie bei und entfesseln Sie endlose Möglichkeiten gemeinsam."
 }
