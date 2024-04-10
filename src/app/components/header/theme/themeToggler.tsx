@@ -20,7 +20,7 @@ const ThemeToggler = () => {
   return (
     <Wrapper>
       <Dropdown
-        defaultValue={theme}
+        defaultValue={theme as string}
         options={availableThemes}
         onChange={(newTheme) => {
           toggleTheme(newTheme);

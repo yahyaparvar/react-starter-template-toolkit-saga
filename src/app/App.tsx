@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { History } from "history";
 import { FC, ReactElement, useLayoutEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { Route, Router, Routes } from "react-router-dom";
 import { globalActions, useglobalSlice } from "store/slice";
@@ -37,18 +36,12 @@ const CustomRouter: FC<CustomRouterProps> = ({ history, ...props }) => {
 
 function App() {
   useglobalSlice();
-  const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
   useLayoutEffect(() => {
     dispatch(globalActions.getAndSetTheme());
   }, []);
   return (
-    <Wrapper
-      onClick={() => {
-        i18n.changeLanguage("de");
-      }}
-    >
-      {t("greeting")}
+    <Wrapper>
       <Header />
       <CustomRouter history={history}>
         <Routes>

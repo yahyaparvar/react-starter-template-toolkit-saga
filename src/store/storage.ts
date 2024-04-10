@@ -1,6 +1,7 @@
 export enum LocalStorageKeys {
   CONNECTED_TO_WALLET_ONCE = "CONNECTED_TO_WALLET_ONCE",
   THEME = "THEME",
+  LANG = "LANG",
 }
 
 export enum SessionStorageKeys {

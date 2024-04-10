@@ -3,6 +3,11 @@ import { initReactI18next } from "react-i18next";
 
 import deTranslation from "./de/translation.json";
 import enTranslation from "./en/translation.json";
+import { LocalStorageKeys, storage } from "store/storage";
+
+const getLanguageFromLocalStorage = () => {
+  return storage.read(LocalStorageKeys.LANG) || "en";
+};
 
 const resources = {
   en: {
@@ -13,12 +18,19 @@ const resources = {
   },
 };
 
-i18n.use(initReactI18next).init({
-  resources,
-  lng: "en",
-  interpolation: {
-    escapeValue: false,
-  },
-});
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: getLanguageFromLocalStorage(),
+    interpolation: {
+      escapeValue: false,
+    },
+  })
+  .then(() => {
+    i18n.on("languageChanged", (lng) => {
+      storage.write(LocalStorageKeys.LANG, lng);
+    });
+  });
 
 export default i18n;
