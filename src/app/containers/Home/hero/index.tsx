@@ -1,8 +1,8 @@
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Button } from "app/components/button";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { COLUMN_CENTER } from "styles/globalStyles";
-
 export const HeroComponent = () => {
   const { t } = useTranslation();
   return (
@@ -11,7 +11,9 @@ export const HeroComponent = () => {
       <Description>
         {t("A_create_react_app_template_using_redux_saga_toolkit")}
       </Description>
-      <Button size="large">Use Template!</Button>
+      <Button size="large" icon={<ChevronRightIcon />} iconPosition="right">
+        Use Template!
+      </Button>
     </Wrapper>
   );
 };
@@ -19,7 +21,7 @@ const Wrapper = styled.div`
   ${COLUMN_CENTER}
   width: 100%;
   gap: 16px;
-  height: 500px;
+  padding: 130px 0;
 `;
 const Title = styled.h1`
   font-size: 70px;

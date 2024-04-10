@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes, ReactNode } from "react";
 import styled, { css } from "styled-components";
-import { BUTTON } from "styles/globalStyles";
+import { BUTTON, ROW_CENTER } from "styles/globalStyles";
 
 const sizes = {
   small: css`
@@ -23,21 +23,25 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const StyledButton = styled.button<ButtonProps>`
   ${BUTTON}
+  ${ROW_CENTER}
   font-size:16px;
-  /* Add your additional button styles here */
   background-color: var(--button);
   color: var(--button-text);
   border-radius: 8px;
   font-weight: 600;
-  ${(props) => sizes[props.size || "medium"]} /* Apply padding based on size */
+  ${(props) => sizes[props.size || "medium"]}
   &:hover {
-    filter: brightness(1.2); // Increase brightness on hover
+    filter: brightness(1.2);
   }
 `;
 
 const Icon = styled.span<{ position: "left" | "right" }>`
-  margin-right: ${(props) => (props.position === "left" ? "8px" : "0")};
-  margin-left: ${(props) => (props.position === "right" ? "8px" : "0")};
+  margin-right: ${(props) => (props.position === "left" ? "4px" : "0")};
+  margin-left: ${(props) => (props.position === "right" ? "4px" : "0")};
+  svg {
+    fill: var(--button-text);
+    margin-bottom: -4px;
+  }
 `;
 
 export const Button: React.FC<ButtonProps> = ({
