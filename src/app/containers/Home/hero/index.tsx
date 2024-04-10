@@ -5,13 +5,24 @@ import styled from "styled-components";
 import { COLUMN_CENTER } from "styles/globalStyles";
 export const HeroComponent = () => {
   const { t } = useTranslation();
+  const handleButtonOnClick = () => {
+    window.open(
+      "https://github.com/new?template_name=template-toolkit-saga&template_owner=yahyaparvar",
+      "_blank"
+    );
+  };
   return (
     <Wrapper>
       <Title>CRA Template</Title>
       <Description>
         {t("A_create_react_app_template_using_redux_saga_toolkit")}
       </Description>
-      <Button size="large" icon={<ChevronRightIcon />} iconPosition="right">
+      <Button
+        size="large"
+        icon={<ChevronRightIcon />}
+        iconPosition="right"
+        onClick={handleButtonOnClick}
+      >
         {t("Use_Template")}
       </Button>
     </Wrapper>
