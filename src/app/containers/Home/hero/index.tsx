@@ -13,7 +13,7 @@ export const HeroComponent = () => {
   };
   return (
     <Wrapper>
-      <Title>CRA Template</Title>
+      <Title>{t("CRA_Template")}</Title>
       <Description>
         {t("A_create_react_app_template_using_redux_saga_toolkit")}
       </Description>

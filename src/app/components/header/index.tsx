@@ -1,5 +1,6 @@
 import history from "app/router/history";
 import { AppPages } from "app/types";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import {
   ROW_ALIGN_CENTER__SPACE_B,
@@ -12,16 +13,23 @@ import { Logo } from "./logo";
 import ThemeToggler from "./theme/themeToggler";
 
 export const Header = () => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <LinkAndLogo>
-        <Logo />
+        <LogoLink
+          onClick={() => {
+            history.push(AppPages.RootPage);
+          }}
+        >
+          <Logo />
+        </LogoLink>
         <NavLink
           onClick={() => {
             history.push(AppPages.AboutMe);
           }}
         >
-          About me
+          {t("About_me")}
         </NavLink>
       </LinkAndLogo>
       <LanguageAndTheme>
@@ -59,4 +67,8 @@ const NavLink = styled.div`
 `;
 const GithubLink = styled.a`
   margin: 0 8px;
+`;
+const LogoLink = styled.div`
+  cursor: pointer;
+  ${UNSELECTABLE}
 `;

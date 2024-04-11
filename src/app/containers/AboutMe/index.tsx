@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 
 import { LazyImage } from "app/components/image/styles";
+import { useTranslation } from "react-i18next";
 import { useInjectReducer, useInjectSaga } from "store/redux-injectors";
 import styled from "styled-components";
 import {
@@ -26,7 +27,7 @@ interface Props {}
 export function AboutMe(props: Props) {
   useInjectReducer({ key: sliceKey, reducer: AboutMeReducer });
   useInjectSaga({ key: sliceKey, saga: aboutMeSaga });
-
+  const { t } = useTranslation();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const aboutMe = useSelector(AboutMeselectors.root);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -38,7 +39,7 @@ export function AboutMe(props: Props) {
         <title>AboutMe</title>
         <meta name="description" content="Description of AboutMe" />
       </Helmet>
-      <Title>About Me</Title>
+      <Title>{t("About_Me")}</Title>
       <Info>
         <Profile>
           <ProfileImg src="https://i.ibb.co/3YwJdwk/avatar.png" />
@@ -57,10 +58,9 @@ export function AboutMe(props: Props) {
           </ProfileContactIcons>
         </Profile>
         <Description>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rerum
-          aliquid nemo non, fugiat voluptate modi distinctio debitis saepe
-          repellendus ab tempore a, blanditiis necessitatibus est dignissimos
-          voluptatum, voluptatibus labore?
+          {t(
+            "I_m_Yahya_Parvar_A_self_motivated_FullStack_developer_since_2017_I_have_a_Associate_Degree_in_Computer_Science__I_started_my_professional_journey_when_I_was_15__with_a_start_up_which_turned_out_to_be_one_of_the_biggest_e_commerce_companies_in_iran__malltina_com_You_can_get_more_info_about_my_worke_in_LinkedIn_or_GitHub"
+          )}
         </Description>
       </Info>
     </Wrapper>
@@ -93,7 +93,7 @@ const Profile = styled.div`
 const Description = styled.div`
   flex: 1;
   line-height: 30px;
-  padding-left: 60px;
+  padding: 0 60px;
 `;
 const ProfileImg = styled(LazyImage)`
   width: 192px;
