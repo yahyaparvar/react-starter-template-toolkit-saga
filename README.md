@@ -1,46 +1,114 @@
-# Getting Started with Create React App
+# <span id='intro'>Introduction</span>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors](https://img.shields.io/badge/contributors-1-brightgreen.svg)](https://github.com/yahyaparvar)
 
-## Available Scripts
+This is a `create-react-app` template featuring themes, multi-language, redux\
+apis, etc. We just combine two powerful tools for redux (saga & toolkit) to have a fantastic experiense with\ state management and SoC (Separation of concern).\
+Let's dive into it!
 
-In the project directory, you can run:
+# <span id='badges'>Get Started 🚀</span>
 
-### `npm start`
+<ol>
+  <li><a href='#installation'>Installation</a></li>
+  <li><a href='#usage'>Usage & Features</a></li>
+  <li><a href='#file-generation'>File Generation</a></li>
+  <li><a href='#hooks'>Hooks</a></li>
+  <li><a href='#contribute'>Contribute</a></li>
+</ol>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# <span id='installation'>Installation</span>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To start the project, simply run
 
-### `npm test`
+```
+yarn
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+&
 
-### `npm run build`
+```
+yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+or
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm i
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+&
 
-### `npm run eject`
+```
+npm run start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You will then see a preview of the template running at `localehost:3000`. That's it.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# <span id='usage'>Usage & Features</span>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Here is just part of benefits that this template provides you! (ignoring the fact that it can be used to create a full scaled applications without any issues)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**- Fantastic approach in implementing redux**
 
-## Learn More
+<ul>
+<li>each container has a seperated slice of saga making it completely irrelevant yet connected to the main reducer (global slice)</li>
+<li>easily handle asynchronous actions using saga</li>
+<li>create redux slice from a simple command (<a href='#file-generation'>See file generation</a>)</li>
+</ul>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**- Themes**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<ul>
+<li>handle themes by just a simple enum named `Themes`. Just add a string to the enum and the font is officially added. More info in the code.</li>
+<li>based on the language you provided the font will change accordingly. so each language has it's own font (best for multi-language)</li>
+</ul>
+
+**- Multi language**
+
+<ul>
+<li>"rtl" support </li>
+<li>auto completion</li>
+</ul>
+
+# <span id='file-generation'>File Generation</span>
+
+Genrate a container with just a simple command (consider container as a new page in your app)\
+simply run:
+
+```
+yarn generate container
+```
+
+you will be asked a series of questions in the terminal, like the name of your new page and so on...\
+then a completely new page with a auto generated redux file is presented to you in your `app/containers` like so:
+
+```
+src
+│
+└── app
+    └── containers
+        ├── NEWLY CREATED CONTAINER (PAGE)
+```
+
+# <span id='hooks'>Hooks</span>
+
+Use any slice anywhere in your app, simply by
+
+```
+use_CONTAINERNAME_Slice()
+```
+
+**for example** if we wanna use home slice
+
+```
+useHomeSlice()
+```
+
+and now whe can get all the data we want from that slice.\
+**important note**: You must add a slice using its hooks to the component if it is not in context of that container.
+
+# <span id='contribute'>Contribute</span>
+
+Contributions are always welcome. Contact me!
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;YAYA 💞
