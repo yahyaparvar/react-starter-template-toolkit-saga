@@ -42,8 +42,20 @@ export const LanguageSwitcher: React.FC = () => {
         <LanguageOption onClick={() => changeLanguage("de")}>
           German
         </LanguageOption>
+        <LanguageOption onClick={() => changeLanguage("fr")}>
+          French
+        </LanguageOption>
+        <LanguageOption onClick={() => changeLanguage("ru")}>
+          русский
+        </LanguageOption>
+        <LanguageOption onClick={() => changeLanguage("ja")}>
+          日本語
+        </LanguageOption>
         <LanguageOption onClick={() => changeLanguage("fa")}>
           فارسی
+        </LanguageOption>
+        <LanguageOption onClick={() => changeLanguage("ar")}>
+          العربی
         </LanguageOption>
       </DropdownContent>
     </LanguageSwitcherContainer>

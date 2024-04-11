@@ -1,0 +1,22 @@
+{
+  "greeting": "こんにちは、世界！",
+  "A_create_react_app_template_using_redux_saga_toolkit": "Redux Saga & Toolkit を使用した create-react-app テンプレート。",
+  "Features": "特徴",
+  "Lightweight": "軽量",
+  "CRA_Template_is_a_boilerplate_with_all_you_need_in_a_project_ensuring_a_lean_and_efficient_solution": "CRA テンプレートは、プロジェクトで必要なすべてを備えたボイラープレートで、スリムで効率的なソリューションを確実にします。",
+  "Type_Safe": "型安全",
+  "Catch_compile_time_errors_with_ease_and_unlock_strong_typing_benefits": "コンパイル時のエラーを簡単に捕捉し、強力な型付けの利点を活用します。",
+  "Tree_Shakable": "Tree-Shakable",
+  "Eliminating_unused_code_and_delivering_leaner_bundles_for_lightning_fast_load_times": "未使用のコードを排除し、高速な読み込み時間のためにより軽量なバンドルを提供します。",
+  "Easy_to_Use": "使いやすい",
+  "Get_started_in_no_time_Explore_comprehensive_documentation_and_rich_examples": "すぐに始めましょう！包括的なドキュメントと豊富な例を探索します。",
+  "Developer_Friendly": "開発者向け",
+  "Simplify_development_with_an_intuitive_and_powerful_file_generation_using_plop_Don_t_repeat_yourself": "plop を使用した直感的で強力なファイル生成で開発を簡素化します。同じことを繰り返さないでください。",
+  "Open_Source": "オープンソース",
+  "Join_the_vibrant_community_Collaborate_contribute_and_unlock_endless_possibilities_together.": "活気あるコミュニティに参加しましょう！協力し、貢献し、無限の可能性を一緒に開きます。",
+  "Use_Template": "テンプレートを使用！",
+  "CRA_Template": "CRA テンプレート",
+  "About_me": "私について",
+  "About_Me": "私について",
+  "I_m_Yahya_Parvar_A_self_motivated_FullStack_developer_since_2017_I_have_a_Associate_Degree_in_Computer_Science__I_started_my_professional_journey_when_I_was_15__with_a_start_up_which_turned_out_to_be_one_of_the_biggest_e_commerce_companies_in_iran__malltina_com_You_can_get_more_info_about_my_worke_in_LinkedIn_or_GitHub": "私はYahya Parvarです。2017年以来、自己駆動型のフルスタック開発者です。コンピューターサイエンスの学士号を持っています。15歳のときにプロの道を歩み始め、イランで最大の電子商取引企業の1つであるスタートアップとともにしました（malltina.com）。私の仕事についての詳細はLinkedInやGitHubで確認できます。"
+}

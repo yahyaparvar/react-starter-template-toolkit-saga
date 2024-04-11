@@ -1,0 +1,22 @@
+{
+  "greeting": "Привет, мир!",
+  "A_create_react_app_template_using_redux_saga_toolkit": "Шаблон create-react-app, использующий инструментарий redux saga & toolkit.",
+  "Features": "Особенности",
+  "Lightweight": "Легкий",
+  "CRA_Template_is_a_boilerplate_with_all_you_need_in_a_project_ensuring_a_lean_and_efficient_solution": "Шаблон CRA - это заготовка со всем необходимым для проекта, обеспечивающая легкое и эффективное решение.",
+  "Type_Safe": "Безопасный тип",
+  "Catch_compile_time_errors_with_ease_and_unlock_strong_typing_benefits": "Легко находите ошибки времени компиляции и разблокируйте преимущества строгой типизации.",
+  "Tree_Shakable": "Возможность убирать лишнее",
+  "Eliminating_unused_code_and_delivering_leaner_bundles_for_lightning_fast_load_times": "Устранение неиспользуемого кода и создание более компактных пакетов для мгновенной загрузки.",
+  "Easy_to_Use": "Прост в использовании",
+  "Get_started_in_no_time_Explore_comprehensive_documentation_and_rich_examples": "Начните быстро! Изучайте полную документацию и примеры.",
+  "Developer_Friendly": "Удобно для разработчика",
+  "Simplify_development_with_an_intuitive_and_powerful_file_generation_using_plop_Don_t_repeat_yourself": "Упрощайте разработку с помощью интуитивного и мощного создания файлов с использованием plop. Не повторяйтесь.",
+  "Open_Source": "Открытый исходный код",
+  "Join_the_vibrant_community_Collaborate_contribute_and_unlock_endless_possibilities_together.": "Присоединяйтесь к живому сообществу! Сотрудничайте, вносите вклад и разблокируйте бесконечные возможности вместе.",
+  "Use_Template": "Используйте шаблон!",
+  "CRA_Template": "Шаблон CRA",
+  "About_me": "Обо мне",
+  "About_Me": "Обо мне",
+  "I_m_Yahya_Parvar_A_self_motivated_FullStack_developer_since_2017_I_have_a_Associate_Degree_in_Computer_Science__I_started_my_professional_journey_when_I_was_15__with_a_start_up_which_turned_out_to_be_one_of_the_biggest_e_commerce_companies_in_iran__malltina_com_You_can_get_more_info_about_my_worke_in_LinkedIn_or_GitHub": "Я - Яхья Парвар, самостоятельный FullStack-разработчик с 2017 года. У меня есть степень ассоциированного образования в области компьютерных наук. Я начал свой профессиональный путь в 15 лет, работая с стартапом, который оказался одной из крупнейших электронной коммерции компаний в Иране (malltina.com). Вы можете получить более подробную информацию о моей работе на LinkedIn или GitHub."
+}

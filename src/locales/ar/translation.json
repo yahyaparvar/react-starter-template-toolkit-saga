@@ -1,0 +1,22 @@
+{
+  "greeting": "مرحبًا، عالم!",
+  "A_create_react_app_template_using_redux_saga_toolkit": "قالب create-react-app، يستخدم redux saga & toolkit.",
+  "Features": "المميزات",
+  "Lightweight": "خفيف الوزن",
+  "CRA_Template_is_a_boilerplate_with_all_you_need_in_a_project_ensuring_a_lean_and_efficient_solution": "CRA Template هو قالب أساسي يحتوي على كل ما تحتاجه في مشروع، مما يضمن حلاً نحيفًا وفعّالًا.",
+  "Type_Safe": "آمن من الأخطاء",
+  "Catch_compile_time_errors_with_ease_and_unlock_strong_typing_benefits": "اعثر على الأخطاء في وقت الترجمة بسهولة واستفد من فوائد الكتابة القوية.",
+  "Tree_Shakable": "قابل للتحليل الشجري",
+  "Eliminating_unused_code_and_delivering_leaner_bundles_for_lightning_fast_load_times": "التخلص من الشيفرات غير المستخدمة وتقديم حزم أخف وزنًا لأوقات تحميل سريعة جدًا.",
+  "Easy_to_Use": "سهل الاستخدام",
+  "Get_started_in_no_time_Explore_comprehensive_documentation_and_rich_examples": "ابدأ بسرعة! استكشف الوثائق الشاملة والأمثلة الغنية.",
+  "Developer_Friendly": "موجه للمطورين",
+  "Simplify_development_with_an_intuitive_and_powerful_file_generation_using_plop_Don_t_repeat_yourself": "بسّط عملية التطوير باستخدام إنشاء الملفات بطريقة بديهية وقوية باستخدام plop. لا تكرر نفس العمل.",
+  "Open_Source": "مفتوح المصدر",
+  "Join_the_vibrant_community_Collaborate_contribute_and_unlock_endless_possibilities_together.": "انضم إلى المجتمع النابض بالحياة! تعاون، وساهم، واستكشف الإمكانيات اللانهائية معًا.",
+  "Use_Template": "استخدم القالب!",
+  "CRA_Template": "قالب CRA",
+  "About_me": "عني",
+  "About_Me": "عني",
+  "I_m_Yahya_Parvar_A_self_motivated_FullStack_developer_since_2017_I_have_a_Associate_Degree_in_Computer_Science__I_started_my_professional_journey_when_I_was_15__with_a_start_up_which_turned_out_to_be_one_of_the_biggest_e_commerce_companies_in_iran__malltina_com_You_can_get_more_info_about_my_worke_in_LinkedIn_or_GitHub": "أنا يحيى برور، مطور FullStack متحمس منذ عام 2017. لدي شهادة مشاركة في علوم الكمبيوتر. بدأت رحلتي المهنية عندما كنت في الخامسة عشرة، مع شركة ناشئة تحولت لتكون واحدة من أكبر شركات التجارة الإلكترونية في إيران (malltina.com). يمكنك الحصول على مزيد من المعلومات حول عملي على LinkedIn أو GitHub."
+}
