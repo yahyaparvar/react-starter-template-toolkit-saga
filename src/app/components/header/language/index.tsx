@@ -32,7 +32,7 @@ export const LanguageSwitcher: React.FC = () => {
   return (
     <LanguageSwitcherContainer ref={containerRef}>
       <DropdownButton onClick={() => setDropdownOpen(!dropdownOpen)}>
-        {i18n.language}
+        <div>{i18n.language}</div>
         <GlobeIcon />
       </DropdownButton>
       <DropdownContent open={dropdownOpen}>
@@ -79,6 +79,15 @@ const DropdownButton = styled.button`
     width: 16px;
     height: 16px;
   }
+  @media screen and (max-width: 478px) {
+    width: 60px;
+  }
+  @media screen and (max-width: 419px) {
+    width: fit-content;
+    div {
+      display: none;
+    }
+  }
 `;
 
 const DropdownContent = styled.div`
@@ -87,7 +96,6 @@ const DropdownContent = styled.div`
   top: 46px;
   border-radius: 6px;
   background-color: var(--background-secondary);
-  min-width: 100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;
 `;
@@ -101,5 +109,9 @@ const LanguageOption = styled.button`
   font-size: 16px;
   &:hover {
     filter: brightness(1.3);
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 14px;
+    padding: 8px 0px;
   }
 `;

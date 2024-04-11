@@ -36,8 +36,10 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <DropdownContainer ref={containerRef}>
       <DropdownButton onClick={() => setIsActive(!isActive)}>
-        {options.find((option) => option.value === selectedValue)?.label ||
-          rest.defaultValue}
+        <div>
+          {options.find((option) => option.value === selectedValue)?.label ||
+            rest.defaultValue}
+        </div>
         <ThemeIcon src={ThemeIconImg} />
       </DropdownButton>
       <DropdownContent style={{ display: isActive ? "block" : "none" }}>
@@ -60,6 +62,12 @@ const DropdownContainer = styled.div`
   width: 130px;
   height: 100%;
   position: relative;
+  @media screen and (max-width: 478px) {
+    width: 110px;
+  }
+  @media screen and (max-width: 419px) {
+    width: fit-content;
+  }
 `;
 
 const DropdownButton = styled.div`
@@ -74,6 +82,15 @@ const DropdownButton = styled.div`
   border-radius: 5px;
   color: var(--text);
   font-weight: 500;
+  @media screen and (max-width: 478px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 419px) {
+    width: fit-content;
+    div {
+      display: none;
+    }
+  }
 `;
 
 const DropdownContent = styled.div`
@@ -89,6 +106,9 @@ const DropdownItem = styled.div`
   cursor: pointer;
   &:hover {
     filter: brightness(1.2);
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 14px;
   }
 `;
 const ThemeIcon = styled(LazyImage)``;

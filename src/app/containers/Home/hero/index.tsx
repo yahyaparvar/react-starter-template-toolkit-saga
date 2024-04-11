@@ -33,12 +33,23 @@ const Wrapper = styled.div`
   width: 100%;
   gap: 16px;
   padding: 130px 0;
+  @media screen and (max-width: 500px) {
+    padding: 30px;
+    padding-top: 100px;
+  }
 `;
 const Title = styled.h1`
   font-size: 70px;
   color: var(--title);
   margin: 0;
+  @media screen and (max-width: 500px) {
+    font-size: 35px;
+  }
 `;
 const Description = styled.div`
   font-size: 20px;
+  text-align: center;
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `;

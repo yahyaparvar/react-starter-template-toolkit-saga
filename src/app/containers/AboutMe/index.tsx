@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import { useInjectReducer, useInjectSaga } from "store/redux-injectors";
 import styled from "styled-components";
 import {
+  COLUMN_CENTER,
   COLUMN_JUSTIFY_START__ALIGN_CENTER,
   ROW_ALIGN_START__JUSTIFY_CENTER,
   ROW_CENTER,
@@ -85,6 +86,9 @@ const Info = styled.div`
   padding: 32px 0;
   ${ROW_ALIGN_START__JUSTIFY_CENTER}
   border-top:1px solid var(--border);
+  @media screen and (max-width: 610px) {
+    ${COLUMN_CENTER}
+  }
 `;
 const Profile = styled.div`
   max-width: 320px;
@@ -94,6 +98,10 @@ const Description = styled.div`
   flex: 1;
   line-height: 30px;
   padding: 0 60px;
+  @media screen and (max-width: 610px) {
+    padding: 0 0px;
+    margin-top: 32px;
+  }
 `;
 const ProfileImg = styled(LazyImage)`
   width: 192px;
