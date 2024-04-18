@@ -65,7 +65,7 @@ const DropdownContainer = styled.div`
   @media screen and (max-width: 478px) {
     width: 110px;
   }
-  @media screen and (max-width: 419px) {
+  @media screen and (max-width: 500px) {
     width: fit-content;
   }
 `;
@@ -85,7 +85,7 @@ const DropdownButton = styled.div`
   @media screen and (max-width: 478px) {
     font-size: 14px;
   }
-  @media screen and (max-width: 419px) {
+  @media screen and (max-width: 500px) {
     width: fit-content;
     div {
       display: none;

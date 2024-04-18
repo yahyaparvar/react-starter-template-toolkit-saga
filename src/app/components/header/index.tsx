@@ -51,7 +51,7 @@ const Wrapper = styled.header`
   ${ROW_ALIGN_CENTER__SPACE_B}
   padding:0 30px;
   height: 100px;
-  @media screen and (max-width: 518px) {
+  @media screen and (max-width: 550px) {
     padding: 0 10px;
   }
 `;
