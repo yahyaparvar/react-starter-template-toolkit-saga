@@ -90,7 +90,7 @@ const DropdownButton = styled.button`
   }
 `;
 
-const DropdownContent = styled.div`
+const DropdownContent = styled.div<{ open: boolean }>`
   display: ${(props: { open: boolean }) => (props.open ? "block" : "none")};
   position: absolute;
   top: 46px;
