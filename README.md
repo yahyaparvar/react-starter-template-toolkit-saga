@@ -1,48 +1,34 @@
-# <span id='intro'>Introduction</span>
 
-[![Contributors](https://img.shields.io/badge/contributors-1-brightgreen.svg)](https://github.com/yahyaparvar)
+# <span id='installation'>Installation</span>
+
+To install the template, simply run
+
+```
+// npm
+npx create-react-app new-app --template toolkit-saga-starter
+```
+
+```
+// yarn 
+yarn create react-app new-app --template toolkit-saga-starter
+```
+
+You will then see a preview of the template running at `localehost:3000`. That's it.
+
 
 This is a `create-react-app` template featuring themes, multi-language, redux\
-apis, etc. We just combine two powerful tools for redux (saga & toolkit) to have a fantastic experiense with\ state management and SoC (Separation of concern).\
+apis, etc. We just combine two powerful tools for redux (saga & toolkit) to have a fantastic experiense with state management and SoC (Separation of concern).\
 Let's dive into it!
 
 # <span id='badges'>Get Started 🚀</span>
-
+[![Contributors](https://img.shields.io/badge/contributors-1-brightgreen.svg)](https://github.com/yahyaparvar)
 <ol>
-  <li><a href='#installation'>Installation</a></li>
   <li><a href='#usage'>Usage & Features</a></li>
   <li><a href='#file-generation'>File Generation</a></li>
   <li><a href='#hooks'>Hooks</a></li>
   <li><a href='#contribute'>Contribute</a></li>
 </ol>
 
-# <span id='installation'>Installation</span>
-
-To start the project, simply run
-
-```
-yarn
-```
-
-&
-
-```
-yarn start
-```
-
-or
-
-```
-npm i
-```
-
-&
-
-```
-npm run start
-```
-
-You will then see a preview of the template running at `localehost:3000`. That's it.
 
 # <span id='usage'>Usage & Features</span>
 
